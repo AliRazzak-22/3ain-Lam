@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>عين لام</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+
+<body class="bgHome">
+  <!-- TOP BAR -->
+  <header class="topBar">
+    <div class="topBarInner">
+      <div>
+        <button id="btnExitToHome" class="iconBtn hidden" title="الخروج إلى الشاشة الأولى" aria-label="الخروج">⟵</button>
+      </div>
+      <div class="miniTitle" id="miniRoundName">—</div>
+      <div class="topRight">
+        <button id="btnEndGame" class="btn danger soft hidden">إنهاء اللعبة</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <main id="screenHome" class="wrap">
+    <section class="hero">
+ <div class="logoWrap">
+  <div class="brandStack" aria-label="عين لام">
+    <span class="brandTop">عين</span>
+    <span class="brandBottom">لام</span>
+  </div>
+</div>
+
+      <p class="subtitle">اختر ست فئات، ثم أدخل أسماء الفريقين وابدأ الجولة.</p>
+    </section>
+
+    <section class="panel">
+      <div class="panelHeader">
+        <h2>اختيار الفئات</h2>
+        <div class="counter"><span id="selectedCount">0</span> / 6</div>
+      </div>
+
+      <div id="categoriesGrid" class="categoriesGrid"></div>
+
+      <div class="divider"></div>
+
+      <div class="formGrid">
+        <div class="field">
+          <label for="roundName">اسم الجولة</label>
+          <input id="roundName" type="text" maxlength="28" placeholder="مثال: التحدي الكبير" />
+          <div class="hint">سيظهر أعلى شاشة اللعب بشكل مصغر.</div>
+        </div>
+
+        <div class="field">
+          <label for="team1Name">اسم الفريق الأول</label>
+          <input id="team1Name" type="text" maxlength="20" placeholder="الفريق الأول" />
+        </div>
+
+        <div class="field">
+          <label for="team2Name">اسم الفريق الثاني</label>
+          <input id="team2Name" type="text" maxlength="20" placeholder="الفريق الثاني" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="toggles">
+          <label class="toggle">
+            <input id="optSounds" type="checkbox" checked />
+            <span>صوت تنبيه بسيط</span>
+          </label>
+
+          <label class="toggle">
+            <input id="optConfirmEnd" type="checkbox" checked />
+            <span>تأكيد عند إنهاء اللعبة</span>
+          </label>
+        </div>
+
+        <button id="btnStart" class="btn primary" disabled>بدء اللعبة</button>
+      </div>
+
+      <div class="hint center" id="startHint">لا بد من اختيار ست فئات لبدء اللعبة.</div>
+    </section>
+  </main>
+
+  <!-- GAME -->
+  <main id="screenGame" class="wrap hidden">
+    <section class="scoreBar">
+      <div class="box">
+        <div class="teamName" id="team1Label">الفريق الأول</div>
+        <div class="teamScore"><span id="team1Score">0</span></div>
+      </div>
+
+      <div class="box">
+        <div class="roundLabel">اسم الجولة</div>
+        <div class="roundValue" id="roundLabel">—</div>
+      </div>
+
+      <div class="box leftAlign">
+        <div class="teamName" id="team2Label">الفريق الثاني</div>
+        <div class="teamScore"><span id="team2Score">0</span></div>
+      </div>
+    </section>
+
+    <section class="board" id="board"></section>
+
+    <div class="footHint">اختر خانة (200/400/600) لعرض سؤال.</div>
+  </main>
+
+  <!-- QUESTION -->
+  <main id="screenQuestion" class="wrap hidden">
+    <div class="qTopRow">
+      <div class="pills">
+        <div class="pill" id="qCategoryPill">—</div>
+        <div class="pill" id="qPointsPill">—</div>
+        <div class="pill" id="qSidePill">—</div>
+      </div>
+
+      <div class="timer">
+        <div class="timerLabel">الوقت</div>
+        <div class="timerValue" id="timerValue">00:00</div>
+      </div>
+    </div>
+
+    <section class="qLayout">
+      <!-- right lifelines -->
+      <aside class="sidePanel">
+        <div class="sideTitle"><span id="lifelineTeam1Title">الفريق الأول</span></div>
+        <div class="lifelineRow">
+          <button class="life" id="t1Two" aria-label="جوابان">
+            <span class="lifeIcon">Ⅱ</span>
+            <span class="tip"><b>جوابان</b>يسمح بطرح جوابين، ويُعد الفريق فائزًا إذا كان أحدهما صحيحًا.</span>
+          </button>
+          <button class="life" id="t1Steal" aria-label="سرقة">
+            <span class="lifeIcon">⇄</span>
+            <span class="tip"><b>سرقة</b>يمنح هذا الفريق أولوية الإجابة حتى لو كان الدور للفريق الآخر.</span>
+          </button>
+          <button class="life" id="t1Block" aria-label="توقيف">
+            <span class="lifeIcon">⛔</span>
+            <span class="tip"><b>توقيف</b>يمنع الفريق الآخر من الحصول على النقاط في هذا السؤال.</span>
+          </button>
+        </div>
+        <div class="hint">تُستخدم المساعدات قبل إظهار الجواب.</div>
+      </aside>
+
+      <!-- center question -->
+      <section class="qCard">
+        <div class="qText" id="qText">—</div>
+        <div id="mediaBox" class="mediaBox hidden"></div>
+
+        <div class="mediaControls hidden" id="mediaControls">
+           <button class="mediaBtn" id="playBtn">تشغيل</button>
+           <button class="mediaBtn" id="pauseBtn">إيقاف</button>
+           <button class="mediaBtn" id="restartBtn">إعادة</button>
+        </div>
+
+        <div class="answerArea">
+          <button id="btnReveal" class="btn primary">إظهار الجواب</button>
+
+          <div class="answerBox hidden" id="answerBox">
+            <div class="answerLabel">الجواب</div>
+            <div class="answerText" id="aText">—</div>
+          </div>
+        </div>
+
+        <div class="awardRow hidden" id="awardRow">
+          <div class="awardTitle">من يحصل على نقاط هذا السؤال؟</div>
+          <div class="awardBtns">
+            <button id="btnAwardT1" class="btn success">الفريق الأول</button>
+            <button id="btnAwardT2" class="btn success">الفريق الثاني</button>
+            <button id="btnAwardNone" class="btn soft">لا أحد</button>
+          </div>
+        </div>
+         <div class="centerRow">
+  <button id="btnBackToBoard" class="btn soft">العودة إلى اللوحة</button>
+</div>
+      </section>
+
+      <!-- left lifelines -->
+      <aside class="sidePanel leftAlign">
+        <div class="sideTitle"><span id="lifelineTeam2Title">الفريق الثاني</span></div>
+        <div class="lifelineRow end">
+          <button class="life" id="t2Two" aria-label="جوابان">
+            <span class="lifeIcon">Ⅱ</span>
+            <span class="tip"><b>جوابان</b>يسمح بطرح جوابين، ويُعد الفريق فائزًا إذا كان أحدهما صحيحًا.</span>
+          </button>
+          <button class="life" id="t2Steal" aria-label="سرقة">
+            <span class="lifeIcon">⇄</span>
+            <span class="tip"><b>سرقة</b>يمنح هذا الفريق أولوية الإجابة حتى لو كان الدور للفريق الآخر.</span>
+          </button>
+          <button class="life" id="t2Block" aria-label="توقيف">
+            <span class="lifeIcon">⛔</span>
+            <span class="tip"><b>توقيف</b>يمنع الفريق الآخر من الحصول على النقاط في هذا السؤال.</span>
+          </button>
+        </div>
+        <div class="hint">تُستخدم المساعدات قبل إظهار الجواب.</div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- RESULT -->
+  <main id="screenResult" class="wrap hidden">
+    <section class="panel centerText">
+      <div class="confetti">🎉 🎊 ✨ 🎉 🎊 ✨</div>
+      <h2 id="resultTitle">—</h2>
+      <p id="resultSubtitle" class="muted">—</p>
+
+      <div class="resultGrid">
+        <div class="box softBox">
+          <div id="resT1Name" class="resName">—</div>
+          <div id="resT1Score" class="resScore">0</div>
+        </div>
+        <div class="box softBox">
+          <div id="resT2Name" class="resName">—</div>
+          <div id="resT2Score" class="resScore">0</div>
+        </div>
+      </div>
+
+      <div class="resultBtns">
+        <button id="btnNewGame" class="btn primary">بدء جولة جديدة</button>
+        <button id="btnHome" class="btn soft">العودة إلى الشاشة الأولى</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="questions.js?v=3"></script>
+  <script src="app.js?v=3"></script>
+</body>
+</html>
