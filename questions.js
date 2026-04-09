@@ -4,7 +4,7 @@ window.AIN_LAM_DATA = {
     {
   id: "general",
   name: "معلومات عامة",
-  image: "assets/categories/general.png",
+  image: "assets/categories/general.PNG",
   questions: {
     200: [
       { q: "ما اسم المضيق الذي يفصل بين إسبانيا والمغرب؟", a: "مضيق جبل طارق" },
