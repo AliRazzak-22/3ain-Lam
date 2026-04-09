@@ -1629,7 +1629,7 @@ questions: {
  {
   id: "hussaini_poems",
   name: "قصائد حسينية",
-  image: "assets/categories/hussaini_poems.png",
+  image: "assets/categories/hussaini_poems.PNG",
   questions: {
     200: [
       { q:"ماهو الأسم الكامل لهذه القصيدة ؟", a:"طفلة وشفت بالنوم", media:{ type:"video", src:"assets/media/poems/200_01.mp4" } },
@@ -1669,7 +1669,7 @@ questions: {
  {
   id: "bab alhara",
   name: "باب الحارة",
-  image: "assets/categories/bab_alhara.png",
+  image: "assets/categories/bab_alhara.PNG",
   questions: {
     200: [
       { q:"مَن رأى الادعشري ليقول هكذا ؟", a:"رؤية الادعشري الشرير في عز قوته وجبروته", media:{ type:"video", src:"assets/media/alhara/200_01.mp4" } },
