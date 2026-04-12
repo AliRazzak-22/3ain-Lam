@@ -1684,6 +1684,81 @@ questions: {
       { q:"ما هي القصة وراء هذه الخناقة بين عبدو وابو مرزوق ؟", a:"بسبب صاحب عبدو الذي كفله لم يدفع الدين الذي عليه", media:{ type:"video", src:"assets/media/alhara/600_02.mp4" } }
  ]
   }
+},
+{
+id: "koraoia",
+  name: "العاب كروية",
+  image: "assets/categories/koraoia.png",
+  questions: {
+    200: [
+      { q:"خمّن النادي ؟", a:"أرسنال", media:{ type:"image", src:"assets/media/koraoia/200_01.jpg" } },
+      { q:"خمّن النادي ؟", a:"أتلتكو مدريد", media:{ type:"image", src:"assets/media/koraoia/200_02.jpg" } },
+      { q:"خمّن النادي ؟", a:"تشيلسي", media:{ type:"image", src:"assets/media/koraoia/200_03.jpg" } },
+      { q:"خمّن النادي ؟", a:"برشلونة", media:{ type:"image", src:"assets/media/koraoia/200_04.jpg" } },
+      { q:"خمّن النادي ؟", a:"ليفربول", media:{ type:"image", src:"assets/media/koraoia/200_05.jpg" } },
+      { q:"خمّن النادي ؟", a:"بايرن ميونخ", media:{ type:"image", src:"assets/media/koraoia/200_06.jpg" } },
+      { q:"خمّن النادي ؟", a:"باريس سان جيرمان", media:{ type:"image", src:"assets/media/koraoia/200_07.jpg" } },
+      { q:"خمّن النادي ؟", a:"إنتر ميلان", media:{ type:"image", src:"assets/media/koraoia/200_08.jpg" } },
+      { q:"خمّن النادي ؟", a:"مانشستر يونايتيد", media:{ type:"image", src:"assets/media/koraoia/200_09.jpg" } },
+      { q:"خمّن النادي ؟", a:"ريال مدريد", media:{ type:"image", src:"assets/media/koraoia/200_10.jpg" } },
+      { q:"خمّن النادي ؟", a:"مانشستر سيتي", media:{ type:"image", src:"assets/media/koraoia/200_11.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"البرتغال", media:{ type:"image", src:"assets/media/koraoia/200_12.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"فرنسا", media:{ type:"image", src:"assets/media/koraoia/200_13.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"السعودية", media:{ type:"image", src:"assets/media/koraoia/200_14.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"الأرجنتين", media:{ type:"image", src:"assets/media/koraoia/200_15.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"إنجيلترا", media:{ type:"image", src:"assets/media/koraoia/200_16.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"مصر", media:{ type:"image", src:"assets/media/koraoia/200_17.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"أسبانيا", media:{ type:"image", src:"assets/media/koraoia/200_18.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"العراق", media:{ type:"image", src:"assets/media/koraoia/200_19.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"البرازيل", media:{ type:"image", src:"assets/media/koraoia/200_20.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"إيطاليا", media:{ type:"image", src:"assets/media/koraoia/200_21.jpg" } }
+
+    ],
+    400: [
+      { q:"خمّن النادي ؟", a:"بروسيا دورتمند", media:{ type:"image", src:"assets/media/koraoia/400_01.jpg" } },
+      { q:"خمّن النادي ؟", a:"يوفينتوس", media:{ type:"image", src:"assets/media/koraoia/400_02.jpg" } },
+      { q:"خمّن النادي ؟", a:"آيس ميلان", media:{ type:"image", src:"assets/media/koraoia/400_03.jpg" } },
+      { q:"خمّن النادي ؟", a:"أتالانتا", media:{ type:"image", src:"assets/media/koraoia/400_04.jpg" } },
+      { q:"خمّن النادي ؟", a:"أستون فيلا", media:{ type:"image", src:"assets/media/koraoia/400_05.jpg" } },
+      { q:"خمّن النادي ؟", a:"ريال سوسيداد", media:{ type:"image", src:"assets/media/koraoia/400_06.jpg" } },
+      { q:"خمّن النادي ؟", a:"نيوكاسل", media:{ type:"image", src:"assets/media/koraoia/400_07.jpg" } },
+      { q:"خمّن النادي ؟", a:"سبورتنگ لشبونة", media:{ type:"image", src:"assets/media/koraoia/400_08.jpg" } },
+      { q:"خمّن النادي ؟", a:"نابولي", media:{ type:"image", src:"assets/media/koraoia/400_09.jpg" } },
+      { q:"خمّن النادي ؟", a:"بايرليفركوزن", media:{ type:"image", src:"assets/media/koraoia/400_10.jpg" } },
+      { q:"خمّن النادي ؟", a:"توتنهام", media:{ type:"image", src:"assets/media/koraoia/400_11.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"النرويج", media:{ type:"image", src:"assets/media/koraoia/400_12.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"ألمانيا", media:{ type:"image", src:"assets/media/koraoia/400_13.jpg" } },
+      { q:"خمّن المنتخب  ؟", a:"هولندا", media:{ type:"image", src:"assets/media/koraoia/400_14.jpg" } },
+      { q:"خمّن المنتخب  ؟", a:"المغرب", media:{ type:"image", src:"assets/media/koraoia/400_15.jpg" } },
+      { q:"خمّن المنتخب  ؟", a:"بولندا", media:{ type:"image", src:"assets/media/koraoia/400_16.jpg" } },
+      { q:"خمّن المنتخب  ؟", a:"أرغواي", media:{ type:"image", src:"assets/media/koraoia/400_17.jpg" } },
+      { q:"من هو النادي ؟", a:"كومو", media:{ type:"image", src:"assets/media/koraoia/400_18.jpg" } },
+      { q:"خمّن المنتخب  ؟", a:"أرسنال", media:{ type:"image", src:"assets/media/koraoia/400_19.jpg" } }
+
+    ],
+    600: [
+      { q:"خمّن النادي ؟", a:"بينفكا", media:{ type:"image", src:"assets/media/koraoia/600_01.jpg" } },
+      { q:"خمّن النادي ؟", a:"آيندهوفن (الدوري الهولندي)", media:{ type:"image", src:"assets/media/koraoia/600_02.jpg" } },
+      { q:"خمّن النادي ؟", a:"غلطة سراي", media:{ type:"image", src:"assets/media/koraoia/600_03.jpg" } },
+      { q:"خمّن النادي ؟", a:"بورتو", media:{ type:"image", src:"assets/media/koraoia/600_04.jpg" } },
+      { q:"خمّن النادي ؟", a:"ليون", media:{ type:"image", src:"assets/media/koraoia/600_05.jpg" } },
+      { q:"خمّن النادي ؟", a:"فنربخشة", media:{ type:"image", src:"assets/media/koraoia/600_06.jpg" } },
+      { q:"خمّن النادي ؟", a:"فينورد", media:{ type:"image", src:"assets/media/koraoia/600_07.jpg" } },
+      { q:"خمّن النادي ؟", a:"مارسيالا", media:{ type:"image", src:"assets/media/koraoia/600_08.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"اليابان", media:{ type:"image", src:"assets/media/koraoia/600_09.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"المكسيك", media:{ type:"image", src:"assets/media/koraoia/600_10.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"الجزائر", media:{ type:"image", src:"assets/media/koraoia/600_11.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"كندا", media:{ type:"image", src:"assets/media/koraoia/600_12.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"الاكوادور", media:{ type:"image", src:"assets/media/koraoia/600_13.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"كوريا الجنوبية", media:{ type:"image", src:"assets/media/koraoia/600_14.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"تونس", media:{ type:"image", src:"assets/media/koraoia/600_15.jpg" } },
+      { q:"خمّن المنتخب ؟", a:"كرواتيا", media:{ type:"image", src:"assets/media/koraoia/600_16.jpg" } },
+      { q:"خمّن النادي ؟", a:"غريميو", media:{ type:"image", src:"assets/media/koraoia/600_17.jpg" } },
+      { q:"خمّن النادي ؟", a:"بيرست", media:{ type:"image", src:"assets/media/koraoia/600_18.jpg" } },
+      { q:"خمّن النادي ؟", a:"شيفيلد يونايتيد", media:{ type:"image", src:"assets/media/koraoia/600_19.jpg" } },
+      { q:"خمّن النادي ؟", a:"ويست بروميتش", media:{ type:"image", src:"assets/media/koraoia/600_20.jpg" } }
+]
+  }
 }
 ]
 };
